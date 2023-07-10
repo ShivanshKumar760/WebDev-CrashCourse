@@ -1,0 +1,64 @@
+/* TO style any element in css we use selectors to style it 
+What are selectors ?
+-selectors are the id , class and tag name
+
+So suppose we want to style the pargraph element of html like changing its font-size we can do that
+by selecting p tag
+
+p
+{
+    font-size:5px;
+}
+This is how we style the element where p is the selector similarly we can select class of the tag
+
+like if <p class ="paragraphElement">Hello</p>
+
+to select the class we use dot operator .class_name and then apply style properties to it 
+
+.paragraphElement
+{
+    font-size:20px;
+}
+
+to select a id we use pound or hash symbol # followed by id name 
+
+<h1 id ="head1">Heading 1</h1>
+
+#head1
+{
+    font-size:100px;
+}
+
+apart from class ,id and name of tag we can select
+attribute of tags also like 
+
+<input type="text" placeholder="share a fact with the world"/>
+
+attribute are type and placeholder 
+*/
+h1{
+    color:red;
+    font-size:100px; 
+    /*   font-size:100px;  means 100 px of screen */
+    /* we can transform our casing of 
+    letter to all upper or all lower 
+    via using text-transform */
+    text-transform:uppercase;
+
+    /* We can also align the text in center ,left and right */
+    text-align: center;
+}
+header{background-color: bisque;}
+
+p{font-size: 20px;
+/* we can change the line heigth or spacing b/w the paragrph line  */
+line-height: 4.4;
+/* We can change the font-family */
+font-family:sans-serif;
+}
+
+/* we can change the list style like removing bullet point styling of 
+the unorderd list*/
+
+ul{
+list-style: none;}

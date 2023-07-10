@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facts-Today</title>
+  </head>
+  <body>
+    <!-- STEP 1 -->
+    <!--h1 is the heading tag and there are more heading tag from 1 to 6-->
+    <h1>Facts-Today</h1>
+
+    <!-- STEP 2 -->
+    <!-- To write anything in Html we have many text relatedd tags
+    like heading tag<h1---h6> ,label tag<label> and most used
+        is paragraph tag <p>  -->
+
+    <!-- So as we can see that our website
+    will have a list of fact lets create a <p> tag to 
+    store facts -->
+
+    <!-- <p>React is being developed by Meta (formerly facebook)</p>
+
+    <p>Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%</p>
+
+    <p>Lisbon is the capital of Portugal</p> -->
+        
+    <!-- STEP 3 -->
+
+    <!--Now if we see our goalSite image We can see that with our facts
+    at the right side we have the genre of facts that is 
+from which field the facts belong to like technology and 
+society-->
+
+    <!-- <p>React is being developed by Meta (formerly facebook)#Technology#</p> -->
+
+    <!-- STEP 4 -->
+    <!-- Now if we see that the Technology although is on the right hand side of facts 
+inside image of our goal site u can see that the genre of facts are seprate element itself
+
+
+so what can  we do to sort it ?
+--Well we can embed another <p> tag inside primary <p> tag-->
+
+    <!-- <p>React is being developed by Meta (formerly facebook)<p>#Technology#</p></p> -->
+
+    <!-- STEP 5 -->
+    <!-- But if we preview the above line that is :
+
+        <p>React is being developed by Meta (formerly facebook)<p>#Technology#</p></p>
+
+
+    The genre Technology is coming on to next line rather than being on the side of 
+facts that's because our <p> tag and <heading tag> like <h1> to <h6> are block element 
+    tag which means they take up the entire block of line to show the content inside 
+of it ,
+
+We can actually use inline tag which takes the space required to show the content-->
+
+<!-- 
+<p>React is being developed by Meta (formerly facebook)<span>#Technology#</span></p>
+
+<p>Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%<span>#society#</span></p>
+
+<p>Lisbon is the capital of Portugal<span>#society#</span></p>
+-->
+
+<!-- STEP 6 -->
+<!-- But since we need a list of facts instead of paragraph
+we can use the list tag:
+    in html we have two type of list 1)ordered and 2)unordered
+
+for this purpose since we dont have to number our facts 
+we will use unordered list-->
+<!-- <ul>
+    <li><p>React is being developed by Meta (formerly facebook)<span>#Technology#</span></p></li>
+    <li><p>Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%<span>#society#</span></p></li>
+    <li><p>Lisbon is the capital of Portugal<span>#society#</span></p></li>
+</ul> -->
+
+
+<!-- STEP 7 -->
+<!-- Now if we see goal image we have a (Source) hypertext which 
+    redirects to another site Now that (Source) is attached with our fact
+that is it is inside our <p> tag with fact under list
+    
+for hypertext we use <a> anchor tag with href attribute like:
+    <a href="link"></a>-->
+
+    <!-- <ul>
+        <li><p>React is being developed by Meta (formerly facebook)<a href="https://opensource.fb.com/">(Source)</a><span>#Technology#</span></p></li>
+        
+    </ul> -->
+
+<!-- STEP 8 -->
+    <!-- Now the problem with above hypertext is 
+    when we click the link it opens up in the same tab
+as of our actual main site we can change it to
+open in new tab  using target attribute of <a>
+    anchor tag and set it _blank which means open in new
+blank tab -->
+
+
+<ul>
+    <li><p>React is being developed by Meta (formerly facebook)<a href="https://opensource.fb.com/" target="_blank">(Source)</a><span>#Technology#</span></p></li>
+    
+</ul>
+
+
+</body>
+</html>

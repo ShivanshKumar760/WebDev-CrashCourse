@@ -1,0 +1,26 @@
+h1
+{
+    font-size:45px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family:'Coiny',sans-serif;
+}
+.facts
+{
+    font-size: 20px;
+    line-height: 1.4;
+    font-family:"Sono",sans-serif;
+    }
+button
+{
+    font-family:'Coiny';
+}
+ul{
+    list-style: none;
+}
+.category
+{
+    text-transform:uppercase;
+    font-size: 15px;
+    font-family: "Coiny",sans-serif;
+}

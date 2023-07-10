@@ -1,0 +1,48 @@
+body
+{
+    background-color: #292524;
+}
+h1
+{
+    font-size:45px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family:'Coiny',sans-serif;
+    /* So in css we cn declare color either by name,rgb value or hex code  */
+    /* name */
+    /* color: aqua; */
+    /* rgb */
+    /* color : rgb(12, 39, 89);      /*rgb(12, 39, 89) this 12 ,39 ,89 are the portion of  
+    red,green and black respectively*/
+
+    /* Hex */
+    /* color :#234abc; */
+    color:white;
+
+}
+.fact-form
+{
+    background-color: #44403c;
+}
+.facts
+{
+    font-size: 20px;
+    line-height: 1.4;
+    font-family:"Sono",sans-serif;
+    color: white;
+    background-color: #44403c;
+    }
+button
+{
+    font-family:'Coiny';
+}
+ul{
+    list-style: none;
+}
+.category
+{
+    text-transform:uppercase;
+    font-size: 15px;
+    font-family: "Coiny",sans-serif;
+    color: red;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts-Today</title>
+</head>
+<body>
+    <!-- In Our goal site image and heading are together apert from list that is we can create diffrent
+    section to store our element and our header part can have image and heading-->
+    <header>
+        <img src="logo.png" style="height:60px;width:60px;">
+        <h1>Facts-Today</h1>
+    </header>
+    <!-- and our list item are part of main body so we can group them in
+    main tag -->
+    <main>
+        <!-- Now our web site have buttons to toggle around different 
+        genre so lets add that -->
+        <!--<button>All</button>
+        <button>Technology</button>
+        <button>Science</button>-->
+        <!-- and like this we will create a button -->
+        <!-- But the problem is this button
+        are inline tag ie they will take only 
+        that much space required by the content
+    and will be placed in same line ,But in our 
+goal website the button are stacked on to each 
+other so to make that we can insert our button in a list
+-->
+    <!--    <ul>
+            <li><button>All</button></li>
+            <li><button>Technology</button></li>
+            <li><button>Science</button></li>
+        </ul>-->
+        <!-- Now if we see the goal site 
+        we can see that our list of button are 
+    side bar so we can group them in 
+<aside> tag which is used for secondary items
+    -->
+    <aside>
+        <ul>
+            <li><button>All</button></li>
+            <li><button>Technology</button></li>
+            <li><button>Science</button></li>
+        </ul>
+    </aside>
+        <ul>
+            <li>
+                <p>React is being developed by Meta (formerly facebook)<a href="https://opensource.fb.com/" target="_blank">(Source)</a><span>#Technology#</span></p>
+            </li>
+
+            <li>
+                <p>Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%<span>#society#</span></p>
+            </li>
+
+            <li>
+                <p>Lisbon is the capital of Portugal<span>#society#</span></p>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

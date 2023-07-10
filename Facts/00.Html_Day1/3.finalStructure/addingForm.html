@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts-Today</title>
+</head>
+<body>
+    <!-- In Our goal site image and heading are together apert from list that is we can create diffrent
+    section to store our element and our header part can have image and heading-->
+    <header>
+        <img src="logo.png" style="height:60px;width:60px;">
+        <h1>Facts-Today</h1>
+        <button>Share a fact</button>
+    </header>
+   <!-- Now our form to add the facts is b/w header and main so lets add the form -->
+   <form>
+    <input type="text" placeholder="share a fact with the world"/>
+    <span>200</span>
+    <input type="text" placeholder="Trustworthy source..."/>
+    <!-- Now our html form will have genre to 
+    select from like a dropdown for that we will be 
+using a select element  -->
+    <select>
+        <!-- the value attribute helps us while 
+        submitting the form  -->
+        <option value="">Choose category</option>"
+        <option value="technology">Technology</option>
+        <option value="science">Science</option>
+        <option value="finance">Finance</option>
+    </select>
+    <button>Post</button>
+   </form>
+   <!-- When we will go through JavaScript then
+we will see how to add this option dynamically via js
+rather than manually -->
+    <main>
+        <aside>
+            <ul>
+                <li><button>All</button></li>
+                <li><button>Technology</button></li>
+                <li><button>Science</button></li>
+            </ul>
+        </aside>
+        <ul>
+            <li>
+                <p>React is being developed by Meta (formerly facebook)<a href="https://opensource.fb.com/" target="_blank">(Source)</a><span>#Technology#</span></p>
+                <div>
+                    <button>👍<strong>24</strong></button>
+                    <button>🤯<strong>9</strong></button>
+                    <button>⛔️<strong>4</strong></button>
+                </div>
+            </li>
+
+            <li>
+                <p>Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%<span>#society#</span></p>
+                <div>
+                    <button>👍<strong>12</strong></button>
+                    <button>🤯<strong>2</strong></button>
+                    <button>⛔️<strong>0</strong></button>
+                </div>
+            </li>
+
+            <li>
+                <p>Lisbon is the capital of Portugal<span>#society#</span></p>
+                <div>
+                    <button>👍<strong>8</strong></button>
+                    <button>🤯<strong>3</strong></button>
+                    <button>⛔️<strong>1</strong></button>
+                </div>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

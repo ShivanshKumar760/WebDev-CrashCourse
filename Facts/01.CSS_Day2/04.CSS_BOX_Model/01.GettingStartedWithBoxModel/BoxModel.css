@@ -1,0 +1,58 @@
+*{margin:0px;
+padding: 0px;
+box-sizing: border-box;
+/* Adding the property box-sizing is not necessry cause its
+a default by the browser but it become hard for old browser to render
+as they are not set with box-sizing ,basically when we
+set the box-sizing to border-box it helps in adjusting the
+height and body of the element more accurately */}
+body
+{
+    background-color: #292524;
+    color : white;
+    font-family:"Sono",sans-serif;
+    padding: 50px;
+}
+.header1
+{
+    /* margin-left:40px; */
+    margin-bottom: 40px;
+}
+h1
+{
+    font-size:45px;
+    text-transform: uppercase;
+    /* text-align: center; */
+    font-family:'Coiny',sans-serif;
+    color:white;
+}
+.fact-form
+{
+    background-color: #44403c;
+    margin-bottom: 40px;
+    padding:20px 50px;
+}
+.facts
+{
+    font-size: 20px;
+    line-height: 1.4;
+    background-color: #44403c;
+    margin-bottom:20px;
+    padding:25px;
+    border:10px solid red;
+}
+
+button
+{
+    font-family:'Coiny';
+}
+ul{
+    list-style: none;
+}
+.category
+{
+    text-transform:uppercase;
+    font-size: 15px;
+    font-family: "Coiny",sans-serif;
+    color: red;
+}

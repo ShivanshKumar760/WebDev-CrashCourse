@@ -1,0 +1,220 @@
+*
+{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #292524;
+    color : white;
+    font-family:"Sono",sans-serif;
+    padding: 50px 65px;
+}
+.header1
+{
+    margin-bottom: 40px;
+    /* text-align: center; */
+    display:flex;
+    align-items: center; 
+    justify-content:space-between;
+
+}
+.Logo
+{
+   
+    order:0;
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+/* decendent selector */
+.Logo img
+{
+    /* width:200px;
+    height: 200px; */
+    width:60px;
+    height:60px;
+}
+h1
+{
+    font-size:45px;
+    text-transform: uppercase;
+    /* text-align: center; */
+    font-family:'Coiny',sans-serif;
+    color:white;
+    /* background-color: red; */
+    /* display: inline-block; */
+    line-height:1;
+    margin-top:8px;
+    margin-left:10px;
+}
+.fact-form
+{
+    background-color: #44403c;
+    margin-bottom: 40px;
+    padding:16px 32px;
+    /* text-align: center; */
+
+    /* 1.TO style form make it flex to align item to center and control shrink and grow property */
+    display:flex;
+    align-items:center;
+    gap:16px;
+    border-radius:100px;
+}
+.category-list
+{
+    margin-bottom:16px;
+}
+.facts
+{
+    font-size: 19px;
+    line-height: 1.1;
+    background-color: #44403c;
+    margin-bottom:20px;
+    padding:16px;
+    display: flex;
+    align-items:center;
+    gap:20px;
+    letter-spacing:-1px;
+}
+
+button
+{
+    font-family:'Coiny';
+}
+ul{
+    list-style: none;
+}
+.category
+{
+    text-transform:uppercase;
+    font-size: 15px;
+    font-family: "Coiny",sans-serif;
+    padding: 3px 10px 0px 10px;
+    margin-left:1px;
+    border-radius:100px;
+    cursor: pointer;
+}
+.vote-buttons
+{
+    flex-shrink:0;
+    margin-left:auto;
+    display:flex;
+    gap: 8px;
+}
+.vote-buttons button {
+    background-color: #78716c;
+    border:none;
+    font-size: 18px;
+    padding: 6px 11px;
+    border-radius:100px;
+    color:inherit;
+    font-weight: 200;
+    cursor: pointer;
+    transition:0.5s;
+
+}
+.vote-buttons button:hover
+{
+    transform: scale(120%);
+    background-color: #292524;
+}
+.grid-container
+{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    column-gap:50px;
+}
+.center-container
+{
+    max-width:1499px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.source:link,.source:visited
+{
+    color: #a8a29e;
+    text-decoration:none;
+    margin-left:15px;
+    transition:2s;
+}
+.source:hover,.source:active
+{
+    color:#3b82fc;
+}
+.btn 
+{
+    border:none;
+    font-family:"Coiny",sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size:18px;
+    padding:17px 0 13px;
+    background-image:linear-gradient(135deg,#3b82f6,rgb(240, 168, 24),#ef4444,#16a34a,#eab308);
+    color:inherit;
+
+    border-radius:100px;
+
+    cursor:pointer;
+    transition:1s;
+}
+.btn:hover
+{
+    transform:scale(115%) rotate(-3deg);
+    
+}
+.btn-large
+{
+    font-size:20px;
+    padding:20px 32px 17px;
+}
+.btn-all-categories
+{
+    margin-bottom:16px;
+    width: 100%;
+}
+.btn-category
+{
+    width:100%;
+    background-image: none;
+}
+/* Adding style to form */
+.fact-form input,.fact-form select
+{
+    width:220px;
+    background-color:#78716c;
+    border: none;
+    border-radius:100px;
+    padding: 16px;;
+    font-size:18px;
+    color:white;
+    font-family:inherit;
+}
+.fact-form select:hover
+{
+    background-color:#484645;   
+    transform:scale(110%);
+}
+/* :: is a sudo element */
+.fact-form input::placeholder
+{
+    color:#a8a29e;
+
+}
+/* Now after changing the display property to flex and changing width of input place holder also  
+when screen is large the post button is not at the right most corner of screen so we can use many
+technique to do that one is margin:auto or padding it but since we want our writing section to be large we 
+can actually stretch that by using flex-grow but since we need only the first input cotainer lets use 
+another sudo class first child which will select the first input tag*/
+.fact-form input:first-child
+{
+    flex-grow:1;
+}
+.fact-form span
+{
+    font-weight:400;
+    font-size:18px;
+    margin-right: 18px;
+}

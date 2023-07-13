@@ -1,0 +1,179 @@
+*
+{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #292524;
+    color : white;
+    font-family:"Sono",sans-serif;
+    padding: 50px 65px;
+}
+.header1
+{
+    margin-bottom: 40px;
+    /* text-align: center; */
+    display:flex;
+    align-items: center; 
+    justify-content:space-between;
+
+}
+.Logo
+{
+   
+    order:0;
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+/* decendent selector */
+.Logo img
+{
+    /* width:200px;
+    height: 200px; */
+    width:60px;
+    height:60px;
+}
+h1
+{
+    font-size:45px;
+    text-transform: uppercase;
+    /* text-align: center; */
+    font-family:'Coiny',sans-serif;
+    color:white;
+    /* background-color: red; */
+    /* display: inline-block; */
+    line-height:1;
+    margin-top:8px;
+    margin-left:10px;
+}
+.fact-form
+{
+    background-color: #44403c;
+    margin-bottom: 40px;
+    padding:20px 50px;
+    text-align: center;
+}
+.facts
+{
+    font-size: 19px;
+    line-height: 1.1;
+    background-color: #44403c;
+    margin-bottom:20px;
+    padding:16px;
+    /* border:10px solid red; */
+    display: flex;
+    align-items:center;
+    gap:20px;
+    letter-spacing:-1px;
+}
+
+button
+{
+    font-family:'Coiny';
+}
+ul{
+    list-style: none;
+}
+.category
+{
+    text-transform:uppercase;
+    font-size: 15px;
+    font-family: "Coiny",sans-serif;
+    padding: 3px 10px 0px 10px;
+    margin-left:1px;
+}
+.vote-buttons
+{
+    margin-left:auto;
+}
+.grid-container
+{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    column-gap:50px;
+}
+/*As we stretch or web page or shrink our webpage or website  expand and shrnk but we want to center it */
+.center-container
+{
+    /* To center a box inside browser it should have a different widht then browser so
+    lets set a different widht */
+    /* width:1000px; */
+    /* lets give a background color to diffrentiate box from browser */
+    /* background-color: orangered; */
+    /* we will use automatic margin such that margin-left and right should be equal */
+    margin-left: auto;
+    margin-right: auto;
+    /* Mow by using margin-left and margin-right when we will expand and shrink browser
+    the browser will automatically calculate the left and right margin and adjust it too be 
+    in middle so it will be in center  */
+
+    /* But since we have set the width:1000px then what will happen is as soon as 
+    we shrink the website below the 1000 container width it will start to go out of the visible 
+    zone 
+    */
+
+    /* To prevent that we can set a max-width property to 1000px which means take the max
+    width only when there is enought space or else shrink  it according to screen size */
+    max-width:1000px;
+}
+/* lets style link */
+/* .source
+{
+    color:red;
+     So this will change the color of link  
+
+    But  
+
+    What if we have to change the color of link when we hover our mouse on it 
+    For that we need sudo class 
+}
+ So sudo class are simple to use what we need is class on which we need to apply the style
+
+.class followed by colon : and hen followed by that sudo property like hove  
+.source:hover
+{
+    color:#3b82fc;
+}
+another sudo class is :active which means we are still on that web site which we clicked
+.source:active
+{
+    color:green;
+
+} */
+
+/* So now we have studied about the sudo class lets look at other two sudo class one 
+is :link which gets applied to only those anchor tag <a> which have href attribute 
+
+and second one is :visited but if the sites open in another tab it wont show any effect*/
+/* .source:link,.source:visited
+{
+    color:red;
+    color: #a8a29e;
+    text-decoration:none;
+    margin-left:15px;
+}
+.source:hover,.source:active
+{
+    color:#3b82fc;
+} */
+
+/* Now lets add a transition onto link cause when we hover onto link it changes color very suddenly
+to make it smooth transition so that it takes time when transition from neutral state to hover all
+we have to do is add transition in neural state and time taken for transition to take place  */
+
+.source:link,.source:visited
+{
+    /* color:red; */
+    color: #a8a29e;
+    text-decoration:none;
+    margin-left:15px;
+    transition:2s;
+}
+.source:hover,.source:active
+{
+    color:#3b82fc;
+}
+

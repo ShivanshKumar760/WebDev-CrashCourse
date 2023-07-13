@@ -1,0 +1,90 @@
+*
+{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #292524;
+    color : white;
+    font-family:"Sono",sans-serif;
+    padding: 50px;
+}
+.header1
+{
+    margin-bottom: 40px;
+    /* text-align: center; */
+    display:flex;
+    align-items: center; 
+    justify-content:space-between;
+
+}
+.Logo
+{
+   
+    order:0;
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+h1
+{
+    font-size:45px;
+    text-transform: uppercase;
+    /* text-align: center; */
+    font-family:'Coiny',sans-serif;
+    color:white;
+    /* background-color: red; */
+    /* display: inline-block; */
+    line-height:1;
+    margin-top:8px;
+    margin-left:10px;
+}
+.fact-form
+{
+    background-color: #44403c;
+    margin-bottom: 40px;
+    padding:20px 50px;
+    text-align: center;
+}
+.facts
+{
+    font-size: 19px;
+    line-height: 1.1;
+    background-color: #44403c;
+    margin-bottom:20px;
+    padding:16px;
+    /* border:10px solid red; */
+    display: flex;
+    align-items:center;
+    gap:20px;
+    letter-spacing:-1px;
+}
+
+button
+{
+    font-family:'Coiny';
+}
+ul{
+    list-style: none;
+}
+.category
+{
+    text-transform:uppercase;
+    font-size: 15px;
+    font-family: "Coiny",sans-serif;
+    padding: 3px 10px 0px 10px;
+    margin-left:1px;
+}
+.vote-buttons
+{
+    margin-left:auto;
+}
+.grid-container
+{
+    /* So basically we have to create two column 1.side bar with button  and 2.main fact show */
+    display:grid;
+    grid-template-columns:250px 1fr;
+    column-gap:50px;
+}

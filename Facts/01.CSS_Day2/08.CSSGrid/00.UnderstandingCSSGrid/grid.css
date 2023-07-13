@@ -1,0 +1,60 @@
+p{margin:0;}
+.test
+{
+    background-color: black;
+    margin:100px;
+    display: grid;
+        /* Now By default nothing will change in our html 
+    cause grid display are suppose to stack on one
+    on another  */
+
+    /* So we can change column widht using
+    
+    grid-template-colouns:cl1 cl2 cl3 ..;
+    
+    and we can specify row height by grid-template-row
+    */
+    grid-template-columns:40px 200px;
+    /*we can specify gap b/w the row and column 
+    using :
+        coulnm-gap:value;
+        
+        and
+
+        row-gap:value;
+    */
+    column-gap:30px;
+    row-gap:20px;
+    grid-template-rows:100px 100px;
+    /* So we can completely customize 
+    how we want to layout our element 
+    in 2dimensional grid 
+    
+    */
+    /* Now there is another measuring unit in CSS and that is : numeric_value(fr) so 
+    what is this fr 
+    
+    so when we specify fr like 1fr for any
+    row or column then that perticular row
+    and column take as much width and height
+    possible 
+
+    like
+
+     grid-template-columns:40px 200px 1fr;
+     
+     Now the third column will stretch out all remaing space 
+    */
+    grid-template-columns:40px 50px 1fr;
+    /* But what we can do is use fr to equally 
+    divide our column and row  */
+    grid-template-columns:1fr 1fr 1fr;
+}
+.child
+{
+    background-color:red;
+    font-size:40px;
+    /* Now By default nothing will change in our html 
+    cause grid display are suppose to stack on one
+    on another  */
+}

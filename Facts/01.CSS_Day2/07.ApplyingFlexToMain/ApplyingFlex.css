@@ -1,0 +1,128 @@
+/* Most element on the page are block level element like h1 h2 h3 h4 h5 h6 ,div..etc
+which means they occupy the 100% width of screen 
+
+other are inline element which occupy space needed by content like button,input,span,strong etc
+
+Now the inline tag like spam wont follow text-align property cause todo that they need space
+and since inline tag only take space required to show the content text-align:center won't work
+
+that is only true if we apply that property onto individual inline tag
+
+ex:
+<div>
+    <span>Hello</span>
+</div>
+
+So if we apply css to span tag like below :
+span{text-align:center;}
+
+This wont work as the span tag dont have enough space to adjust text inside of the tag
+
+but if we apply the css on <div> tag which the parent tag of <span> the css will work cause
+
+for div there is space as it is block element and the whole span tag and it's content will act 
+as a text 
+
+
+<div>
+    <span>Hello</span>
+</div>
+
+div{text-align:center;}
+
+Next Point is that every inline element like span , button and input act as a text 
+so text properties will work on all like text-align
+
+we can convert a block element into inline element and then inline element to block element using
+display property
+
+display:inline; or use display:block;
+*/
+*
+{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #292524;
+    color : white;
+    font-family:"Sono",sans-serif;
+    padding: 50px;
+}
+.header1
+{
+    margin-bottom: 40px;
+    /* text-align: center; */
+    display:flex;
+    align-items: center; 
+    justify-content:space-between;
+
+}
+.Logo
+{
+   
+    order:0;
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+h1
+{
+    font-size:45px;
+    text-transform: uppercase;
+    /* text-align: center; */
+    font-family:'Coiny',sans-serif;
+    color:white;
+    /* background-color: red; */
+
+    /* so as we can see that the red color is filled in line and not just in the part where 
+    Facts-Today is written */
+    /* display: inline-block; */
+    line-height:1;
+    margin-top:8px;
+    margin-left:10px;
+}
+.fact-form
+{
+    background-color: #44403c;
+    margin-bottom: 40px;
+    padding:20px 50px;
+    text-align: center;
+}
+.facts
+{
+    font-size: 19px;
+    line-height: 1.1;
+    background-color: #44403c;
+    margin-bottom:20px;
+    padding:16px;
+    /* border:10px solid red; */
+    display: flex;
+    align-items:center;
+    gap:20px;
+    letter-spacing:-1px;
+    /* Letter spacing will space each letter apart or close and by -number letter keep on comming close */
+}
+
+button
+{
+    font-family:'Coiny';
+}
+ul{
+    list-style: none;
+}
+.category
+{
+    text-transform:uppercase;
+    font-size: 15px;
+    font-family: "Coiny",sans-serif;
+    padding: 3px 10px 0px 10px;
+    margin-left:1px;
+}
+.vote-buttons
+{
+    margin-left:auto;
+    /* Since we have to push vote buttons all the way to right we will set auto margin which will take as much margin as it can */
+}

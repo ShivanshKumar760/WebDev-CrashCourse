@@ -1,0 +1,186 @@
+*
+{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #292524;
+    color : white;
+    font-family:"Sono",sans-serif;
+    padding: 50px 65px;
+}
+.header1
+{
+    margin-bottom: 40px;
+    /* text-align: center; */
+    display:flex;
+    align-items: center; 
+    justify-content:space-between;
+
+}
+.Logo
+{
+   
+    order:0;
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+/* decendent selector */
+.Logo img
+{
+    /* width:200px;
+    height: 200px; */
+    width:60px;
+    height:60px;
+}
+h1
+{
+    font-size:45px;
+    text-transform: uppercase;
+    /* text-align: center; */
+    font-family:'Coiny',sans-serif;
+    color:white;
+    /* background-color: red; */
+    /* display: inline-block; */
+    line-height:1;
+    margin-top:8px;
+    margin-left:10px;
+}
+.fact-form
+{
+    background-color: #44403c;
+    margin-bottom: 40px;
+    padding:20px 50px;
+    text-align: center;
+}
+.category-list
+{
+    margin-bottom:16px;
+}
+.facts
+{
+    font-size: 19px;
+    line-height: 1.1;
+    background-color: #44403c;
+    margin-bottom:20px;
+    padding:16px;
+    /* border:10px solid red; */
+    display: flex;
+    align-items:center;
+    gap:20px;
+    letter-spacing:-1px;
+}
+
+button
+{
+    font-family:'Coiny';
+}
+ul{
+    list-style: none;
+}
+.category
+{
+    text-transform:uppercase;
+    font-size: 15px;
+    font-family: "Coiny",sans-serif;
+    padding: 3px 10px 0px 10px;
+    margin-left:1px;
+    border-radius:100px;
+    cursor: pointer;
+}
+.vote-buttons
+{
+    /* Our vote-button is both flex item for facts class and flex container for button inside */
+    flex-shrink:0;
+    margin-left:auto;
+    /* Adding flex property to put them side by side */
+    display:flex;
+    gap: 8px;
+}
+.vote-buttons button {
+    background-color: #78716c;
+    border:none;
+    font-size: 18px;
+    padding: 6px 11px;
+    border-radius:100px;
+    color:inherit;
+    font-weight: 200;
+    cursor: pointer;
+    /* transform: scale(110%); */
+    transition:0.5s;
+
+}
+.vote-buttons button:hover
+{
+    transform: scale(120%);
+    background-color: #292524;
+}
+.grid-container
+{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    column-gap:50px;
+}
+.center-container
+{
+    max-width:1499px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.source:link,.source:visited
+{
+    /* color:red; */
+    color: #a8a29e;
+    text-decoration:none;
+    margin-left:15px;
+    transition:2s;
+}
+.source:hover,.source:active
+{
+    color:#3b82fc;
+}
+.btn 
+{
+    border:none;
+    font-family:"Coiny",sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size:18px;
+    padding:17px 0 13px;
+    background-image:linear-gradient(135deg,#3b82f6,rgb(240, 168, 24),#ef4444,#16a34a,#eab308);
+    /* In earlier browser Button's text dosent inherit color */
+    /* So while some browser will work */
+    /* color : white;*/ /*with this not everybrowser will so we force full button text to
+    take or inherit color from body */
+    color:inherit;
+    /* TO curve the button we use border radius */
+    border-radius:100px;
+    /* Adding hand sign onto cursor pointer */
+    cursor:pointer;
+    transition:1s;
+}
+.btn:hover
+{
+    /* transform: scale(110%);it will enlarge the button when hover */
+    transform:scale(115%) rotate(-3deg);
+    
+}
+.btn-large
+{
+    font-size:20px;
+    padding:20px 32px 17px;
+}
+.btn-all-categories
+{
+    margin-bottom:16px;
+    width: 100%;/*100 percent of parent element*/
+}
+.btn-category
+{
+    width:100%;
+    background-image: none;
+}

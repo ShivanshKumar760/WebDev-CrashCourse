@@ -11,7 +11,6 @@
     *
     {
         color : white ;
-    }
     background-color: #44403c;
     }*/
 /* * */
@@ -32,13 +31,13 @@
     on every element of the document which can have or take
     color property of css since *global selector will 
     apply color property to every tag there is actually no use 
-    of ingeritance her but in case of inhertiance too color will be 
+    of inheritance here but in case of inhertiance too color will be 
     applied on 
     to ul the child of ul will inherit it that is li
     and li child will inherit it  */
 
     /* To avoid this we can provide color property into
-    body tag and cause of that body's chidld will only inherit the 
+    body tag and cause of that body's child will only inherit the 
     property 
     ie 
 

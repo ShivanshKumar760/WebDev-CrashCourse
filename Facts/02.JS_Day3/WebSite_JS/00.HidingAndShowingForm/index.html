@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts-Today</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./StylingForm.css">
+</head>
+<body>
+    <div class="center-container">
+        <header class="header1">
+            <div class="Logo">
+                <!-- <img src="logo.png" style="height:60px;width:60px;"> -->
+                <img src="logo.png">
+                <h1>Facts-Learn-Today</h1>
+            </div>
+            <button class="btn btn-large btn-open">Share a fact</button>
+        </header>
+    <form class="fact-form hidden">
+        <input type="text" placeholder="share a fact with the world"/>
+        <span>200</span>
+        <input type="text" placeholder="Trustworthy source..."/>
+        <select>
+            <option value="">Choose category</option>"
+            <option value="technology">Technology</option>
+            <option value="science">Science</option>
+            <option value="finance">Finance</option>
+        </select>
+        <button class="btn btn-large">Post</button>
+    </form>
+        <main class="grid-container">
+            <aside>
+                    <ul>
+                        <li class="category-list"><button class="btn btn-all-categories">All</button></li>
+                        <li class="category-list"><button class="btn btn-category" style="background-color:#3b82f6;">Technology</button></li>
+                        <li class="category-list"><button class="btn btn-category" style="background-color:#16a34a;">Science</button></li>
+                    </ul>
+                </aside>
+                <section>
+                <ul>
+                    <li class="facts">
+                        <p>React is being developed by Meta (formerly facebook)<a class="source" href="https://opensource.fb.com/" target="_blank">(Source)</a></p>
+                        <!-- Since we have to make 3 flex item inside our main section which is fact ie our paragraph tag ,like buttons and genre 
+                        so to make 3 flex item according to goad site lets take span tag out  -->
+                        <span class="category" style="background-color:#3b82f6;">Technology</span>
+                        <div class="vote-buttons">
+                            <button>👍24</button>
+                            <button>🤯9</button>
+                            <button>⛔️4</button>
+                        </div>
+                    </li>
+
+                    <li class="facts">
+                        <p style="display: inline-block;">Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%</p>
+                        <span class="category" style="background-color:#eab308;">society</span>
+                        <div class="vote-buttons">
+                            <button>👍12</button>
+                            <button>🤯2</button>
+                            <button>⛔️0</button>
+                        </div>
+                    </li>
+
+                    <li class="facts">
+                        <p>Lisbon is the capital of Portugal</p>
+                        <span class="category" style="background-color:#eab308;">society</span>
+                        <div class="vote-buttons">
+                            <button>👍8</button>
+                            <button>🤯3</button>
+                            <button>⛔️1</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

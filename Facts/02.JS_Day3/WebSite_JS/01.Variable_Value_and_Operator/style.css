@@ -11,6 +11,7 @@ body
     font-family:"Sono",sans-serif;
     padding: 50px 65px;
 }
+
 .header1
 {
     margin-bottom: 40px;
@@ -28,11 +29,9 @@ body
     align-items: center;
     gap: 15px;
 }
-/* decendent selector */
+
 .Logo img
 {
-    /* width:200px;
-    height: 200px; */
     width:60px;
     height:60px;
 }
@@ -40,23 +39,29 @@ h1
 {
     font-size:45px;
     text-transform: uppercase;
-    /* text-align: center; */
     font-family:'Coiny',sans-serif;
     color:white;
-    /* background-color: red; */
-    /* display: inline-block; */
     line-height:1;
     margin-top:8px;
     margin-left:10px;
+}
+.hidden
+{
+    /* display:none; */
+    /* Now this display property which we will add in form will not work thats 
+    simply because the class .fact-form which is the form class has also display property
+    so the display of that class will take priority over display of hidden class thats because
+    it is declare after hidden class */
+
+    /* So to overcome that we have !important parameter or css property which tell
+    browser to give it more priority over any other */
+    display:none !important;
 }
 .fact-form
 {
     background-color: #44403c;
     margin-bottom: 40px;
     padding:16px 32px;
-    /* text-align: center; */
-
-    /* 1.TO style form make it flex to align item to center and control shrink and grow property */
     display:flex;
     align-items:center;
     gap:16px;
@@ -197,17 +202,11 @@ ul{
     background-color:#484645;   
     transform:scale(90%);
 }
-/* :: is a sudo element */
 .fact-form input::placeholder
 {
     color:#a8a29e;
 
 }
-/* Now after changing the display property to flex and changing width of input place holder also  
-when screen is large the post button is not at the right most corner of screen so we can use many
-technique to do that one is margin:auto or padding it but since we want our writing section to be large we 
-can actually stretch that by using flex-grow but since we need only the first input cotainer lets use 
-another sudo class first child which will select the first input tag*/
 .fact-form input:first-child
 {
     flex-grow:1;

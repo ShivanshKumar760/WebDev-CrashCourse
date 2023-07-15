@@ -56,8 +56,10 @@ function calcFactAge(year)
     {
         return age;
     }
-    else{
-        return "Impossible year";
+    else
+    {
+        // return "Impossible year";
+        return `Impossible year.Year needs to be less or equal to ${currentYear}`;
     }
 
 }
@@ -70,7 +72,7 @@ let votesFalse=7;
 const totalUpvote = votesInteresting+votesMindblowing;
 
 const message = totalUpvote > votesFalse ? "Fact is Correct":"Might be false ... check your sorce";
-alert(message);
+// alert(message);
 
 //Strings crash course 
 /*
@@ -89,6 +91,19 @@ const upperText=text.toUpperCase();
 const text = "Lisbon is the capital of Portugal";
 const upperText=text.toUpperCase();
 console.log(text, upperText);
+
+// Now in js we have string template which can be classified as a format string in which we 
+//put varaible and not value inside string ie in string we pass variable and when executing  the
+//program the interpreter of js identify itself as a string template and when encounter a variable subsitute
+//the value in the place
+
+//to use string template we use bactics `this is my string template ${variable_name}`
+
+const str = `The current fact is  ${text},It is 
+${calcFactAge(2015)} years old . It is probably ${totalUpvote > votesFalse ? "true" : "false"}`;
+
+console.log(str); 
+
 
 
 

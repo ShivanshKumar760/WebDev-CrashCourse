@@ -88,8 +88,12 @@ console.log(result);
 
 function calcFactAge(year)
 {
-    const currentYear=2023;
-    const age= currentYear -year;
+    // const currentYear=2023;
+    // Now insted of actually manually typing the date we can insted use a javascript function
+    // which is Date().getFullYear(); and since Date() is a class /method declared or pre built in javascript dom
+    // we have to initialize it with new keyword
+    const currentYear = new Date().getFullYear();
+    const age= currentYear - year;
     return age;
 }
 let age=calcFactAge(2015);

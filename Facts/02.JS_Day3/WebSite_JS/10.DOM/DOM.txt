@@ -1,0 +1,13 @@
+What is DOM?
+---------------
+So let's understand what is DOM well DOM is abreviated form for Document Object Model where document stands
+for HTML file which gets rendered in browser and Object means all the element in HTML file becomes 
+a object for the javascript to manipulate  the look and functionality of the html file when a event occurs
+
+
+DOM is a tree manipulation of a HTML document
+
+Each Html element is representd as a JavaScript object , which allow JavaScript to access the HTML element
+
+DOM Object contain methods and properties to manipulate them : change text and html attributes,insert new
+HTML element etc.

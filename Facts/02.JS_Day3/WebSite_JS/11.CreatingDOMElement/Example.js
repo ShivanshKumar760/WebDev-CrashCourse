@@ -36,25 +36,25 @@ const btn=document.querySelector(".btn-open");
 const form=document.querySelector(".fact-form");
 //creating DOM elements to Render facts in list
 const factsList=document.querySelector(".facts-list");
+//Now lets add some more DOM Elements to the js file to fetch data from supabase like facts store in supabase
+//but for now lets just render data from the list initialFact rather than loading data from backend supabase
 
 
 factsList.innerHTML="";
 
-function createFact(dataArray)
-{
-const htmlArr=dataArray.map(
-  (fact)=>`
-  <li class="facts">
-    <p>${fact.text}<a class="source" href="${fact.source}" target="_blank">(Source)</a></p>
-    <span class="category" style="background-color:#3b82f6;">${fact.category}</span>
-  </li>`
-  )
+//So to add data in normal javascript may be a bit tricky but in vanila javascript the most used is 
+//innerAdjacentHTML which basically means that corresponding to following html tag add the data inside it 
+const htmlArr=initialFacts.map((fact)=>`<li class="facts">
+<p>
+${fact.text}
+<a class="source" href="https://opensource.fb.com/" target="_blank">(Source)</a>
+</p>
+<span class="category" style="background-color:#3b82f6;">Technology</span>
+</li>`)
+// console.log(htmlArr);
 const html=htmlArr.join("");
+// console.log(html);
 factsList.insertAdjacentHTML("afterbegin",html);
-}
-// createFact(initialFacts);
-// createFact([{text:"Jonas"}])
-
 
 
 

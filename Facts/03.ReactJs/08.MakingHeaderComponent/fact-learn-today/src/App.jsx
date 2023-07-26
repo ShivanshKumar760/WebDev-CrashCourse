@@ -54,7 +54,7 @@ function Header({setForm,showForm})
     <header className="header1">
             <div className="Logo">
                 <img src="logo.png" alt="Fact-learn-today-logo"/>
-                <h1>Facts-Learn-Todayyyyyyyy</h1>
+                <h1>Facts-Learn-Todayyy</h1>
             </div>
             <button className="btn btn-large btn-open" onClick={()=>setForm(!showForm)}>
                 {showForm ? "close":"Share a fact"}

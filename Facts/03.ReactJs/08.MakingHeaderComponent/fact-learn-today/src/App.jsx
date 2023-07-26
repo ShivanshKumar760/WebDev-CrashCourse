@@ -57,7 +57,7 @@ function Header({setForm,showForm})
                 <h1>Facts-Learn-Todayyy</h1>
             </div>
             <button className="btn btn-large btn-open" onClick={()=>setForm(!showForm)}>
-                {showForm ? "close":"Share a fact"}
+                {showForm ? "close the form":"Share a fact"}
             </button>
     </header>
     )

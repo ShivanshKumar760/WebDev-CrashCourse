@@ -80,8 +80,9 @@ function NewFactForm()
   function handleSubmit(e)
   {
     e.preventDefault();
-    console.log(text,source,category); 
-    console.log("Doneeygegfaievfie");
+    console.log(text,source,category);
+    console.log("Did it yaar");
+    console.log("next");
   }
   return (
   <form className="fact-form" onSubmit={(handleSubmit)}>

@@ -11,4 +11,3 @@ your devDependencies to work around this error. This will make this message
 go away.
 
 
-SOl:

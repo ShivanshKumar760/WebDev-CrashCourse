@@ -158,7 +158,7 @@ function NewFactForm({setFacts,setForm})
        onChange={(e)=>setSource(e.target.value)}/>
 
        <select value={category} onChange={(e)=>setCategory(e.target.value)}>
-            <option value="">Choose category</option>"
+            <option value="">Choose category</option>
             {
               CATEGORIES.map(
                 (cat)=>
@@ -198,7 +198,7 @@ function Factslist({facts})
   // const facts=initialFacts;
   return (
     <section>
-      <ul class="facts-list">
+      <ul className="facts-list">
         {facts.map(
           (facts)=><Fact key={facts.id} fact={facts}/>
           )

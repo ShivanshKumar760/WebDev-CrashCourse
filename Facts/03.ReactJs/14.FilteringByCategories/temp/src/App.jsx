@@ -65,7 +65,7 @@ function App() {
     <Header setForm={setForm} showForm={showForm}/>
     {/* {showForm?<NewFactForm facts={facts} setFacts={setFacts} setForm={setForm}/>:null} */}
     {showForm?<NewFactForm facts={facts} setFacts={setFacts} setForm={setForm}/>:null}
-    <main className="grid-container">
+    <main class="grid-container">
         <CategoryFilter/>
         {isLoading ? <Loader/>:<Factslist facts={facts}/>}
         
@@ -177,7 +177,7 @@ function CategoryFilter()
   return (
     <aside>
       <ul>
-        <li className="category-list"><button className="btn btn-all-categories">All</button></li>
+        <li class="category-list"><button class="btn btn-all-categories">All</button></li>
         {
           CATEGORIES.map(
             (cat)=>
@@ -222,5 +222,3 @@ function Fact({fact})
     )
 }
 export default App;
-
-

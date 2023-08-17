@@ -40,11 +40,22 @@ function App() {
   // const [facts,setFacts]=useState(initialFacts);
   const [facts,setFacts]=useState([]);
   const [isLoading,setIsLoading] = useState(false);
+  //Adding new state to toggle category
+  const [currentCategory,setCurrentCategory] = useState("all");
   useEffect(function() {
     async function getFacts(){
       setIsLoading(true);
-      const { data: facts, error } = await supabase.from('facts').select('*').order("text",{ascending:true}).limit(1000);
+      //creating a query object
+      let query = supabase.from('facts').select('*');
+      if(currentCategory!=="all")
+      {
+        //using .eq() function to change the current category when the button is clicked
+        query=query.eq("category",currentCategory)
+      }
+      // const { data: facts, error } = await supabase.from('facts').select('*').eq("category","technology").order("text",{ascending:true}).limit(1000);
       // console.log(facts);
+      const { data: facts, error } = await query.order("text",{ascending:true}).limit(1000);
+
       console.log(error);
       if(!error)
       {
@@ -58,15 +69,17 @@ function App() {
     }
     getFacts();
 
-
-  },[]);
+//since useEffect function loads only one time while opening the site so when we click a button it wont reload
+//and for that we pass the state changing variable to the list so useEffect function gets to know what to change 
+  },[currentCategory]);
   return(
     <>
     <Header setForm={setForm} showForm={showForm}/>
     {/* {showForm?<NewFactForm facts={facts} setFacts={setFacts} setForm={setForm}/>:null} */}
     {showForm?<NewFactForm facts={facts} setFacts={setFacts} setForm={setForm}/>:null}
     <main className="grid-container">
-        <CategoryFilter/>
+      {/* passing the setCurrentCategory state function as a prop to CategoryFilter component */}
+        <CategoryFilter setCurrentCategory={setCurrentCategory}/>
         {isLoading ? <Loader/>:<Factslist facts={facts}/>}
         
         {/* <Factslist facts={facts}/> */}
@@ -172,17 +185,21 @@ function NewFactForm({setFacts,setForm})
   )
 }
 
-function CategoryFilter()
+function CategoryFilter({setCurrentCategory})
 {
   return (
     <aside>
       <ul>
-        <li className="category-list"><button className="btn btn-all-categories">All</button></li>
+        <li className="category-list">
+          <button className="btn btn-all-categories" onClick={()=>setCurrentCategory("all")}>
+            All
+          </button>
+        </li>
         {
           CATEGORIES.map(
             (cat)=>
             <li className="category-list" key={cat.name}>
-              <button className="btn btn-category" style={{backgroundColor:cat.color}}>
+              <button className="btn btn-category" style={{backgroundColor:cat.color}} onClick={()=>setCurrentCategory(cat.name)}>
                 {cat.name}
               </button>
             </li>
@@ -195,6 +212,10 @@ function CategoryFilter()
 }
 function Factslist({facts})
 {
+  if(facts.length===0)
+  {
+    return <p className='message'>No facts for this category , pls create a fact😊</p>;
+  }
   // const facts=initialFacts;
   return (
     <section>

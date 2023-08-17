@@ -76,7 +76,7 @@ function App() {
 }
 function Loader()
 {
-  return <p className='message'>Loading your facts...</p>
+  return <p className='message'>Loading your facts,Please Wait...</p>
 }
 function Header({setForm,showForm})
 {

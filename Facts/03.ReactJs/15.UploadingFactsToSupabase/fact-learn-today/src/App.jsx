@@ -122,13 +122,13 @@ function isValidUrl(string)
   catch(_){return false;}
   return url.protocol==="http:"||url.protocol==="https:"
 }
-function NewFactForm({setFacts,setForm})
+ function NewFactForm({setFacts,setForm})
 {
   const [text,setText]=useState("");
   const textLength=text.length;
   const [source,setSource]=useState("");
   const [category,setCategory]=useState("");
-  function handleSubmit(e)
+  async function handleSubmit(e)
   {
     //1.prevent the browser reload
     e.preventDefault();
@@ -137,7 +137,7 @@ function NewFactForm({setFacts,setForm})
     if(text && isValidUrl(source) && category && textLength<=200)
     {
       // console.log("Valid");
-      //3.Create a new fact object
+      // 3.Create a new fact object
       const newFact=
       {
       id:Math.round(Math.random()*1000000),
@@ -148,9 +148,13 @@ function NewFactForm({setFacts,setForm})
       votesMindblowing:0,
       votesFalse:0,
       createdIn:new Date().getFullYear(),};
+
+      //3.5 Upload fact to supabase and receive facts
+      // const {data:newFact,error}= await supabase.from("facts").insert([{text,source,category}]).select();
     //4.Add the fact to the UI:add the fact to state
+      console.log(newFact);
      
-       setFacts((facts)=>[newFact,...facts]);
+      //  setFacts((facts)=>[newFact,...facts]);/
     //5.Reset input field
       setText("");
       setSource("");
@@ -234,6 +238,8 @@ function Fact({fact})
     <li className="facts">
     <p>{fact.text}<a className="source" href={fact.source} target="_blank" rel="noreferrer">(Source)</a></p>
     <span className="category" style={{backgroundColor:CATEGORIES.find((cat)=>cat.name===fact.category).color}}>{fact.category}</span> 
+
+ 
       <div className="vote-buttons">
         <button>👍{fact.votesInteresting}</button>
         <button>🤯{fact.votesMindblowing}</button>

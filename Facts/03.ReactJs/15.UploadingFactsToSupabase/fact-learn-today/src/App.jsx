@@ -155,7 +155,7 @@ function isValidUrl(string)
       const {data:newFact,error}= await supabase.from("facts").insert([{text,source,category}]).select();
       setIsUploading(false);
     //4.Add the fact to the UI:add the fact to state
-      // console.log(newFact);
+      console.log(newFact);
       // console.log(error);
      
       // setFacts((facts)=>[newFact,...facts]);

@@ -128,6 +128,7 @@ function isValidUrl(string)
   const textLength=text.length;
   const [source,setSource]=useState("");
   const [category,setCategory]=useState("");
+  const[isUploading,setIsUploading]=useState(false);
   async function handleSubmit(e)
   {
     //1.prevent the browser reload
@@ -138,23 +139,25 @@ function isValidUrl(string)
     {
       // console.log("Valid");
       // 3.Create a new fact object
-      const newFact=
-      {
-      id:Math.round(Math.random()*1000000),
-      text,
-      source,
-      category,
-      votesInteresting:0,
-      votesMindblowing:0,
-      votesFalse:0,
-      createdIn:new Date().getFullYear(),};
+      // const newFact=
+      // {
+      // id:Math.round(Math.random()*1000000),
+      // text,
+      // source,
+      // category,
+      // votesInteresting:0,
+      // votesMindblowing:0,
+      // votesFalse:0,
+      // createdIn:new Date().getFullYear(),};
 
       //3.5 Upload fact to supabase and receive facts
-      // const {data:newFact,error}= await supabase.from("facts").insert([{text,source,category}]).select();
+      setIsUploading(true);
+      const {data:newFact,error}= await supabase.from("facts").insert([{text,source,category}]).select();
+      setIsUploading(false);
     //4.Add the fact to the UI:add the fact to state
       console.log(newFact);
      
-      //  setFacts((facts)=>[newFact,...facts]);/
+      setFacts((facts)=>[newFact,...facts]);
     //5.Reset input field
       setText("");
       setSource("");
@@ -167,14 +170,14 @@ function isValidUrl(string)
   return (
     <form className="fact-form" onSubmit={(handleSubmit)}>
        <input type="text" placeholder="share a fact with the world" value={text}  
-       onChange={(e)=>setText(e.target.value)}/>
+       onChange={(e)=>setText(e.target.value)} disabled={isUploading}/>
 
        <span>{200-textLength}</span>
 
        <input type="text" placeholder="Trustworthy source..." value={source} 
-       onChange={(e)=>setSource(e.target.value)}/>
+       onChange={(e)=>setSource(e.target.value)} disabled={isUploading}/>
 
-       <select value={category} onChange={(e)=>setCategory(e.target.value)}>
+       <select value={category} onChange={(e)=>setCategory(e.target.value)} disabled={isUploading}>
             <option value="">Choose category</option>
             {
               CATEGORIES.map(
@@ -184,7 +187,7 @@ function isValidUrl(string)
                 </option>)
             }
         </select>
-        <button className="btn btn-large">Post</button>
+        <button className="btn btn-large" disabled={isUploading}>Post</button>
     </form>
   )
 }

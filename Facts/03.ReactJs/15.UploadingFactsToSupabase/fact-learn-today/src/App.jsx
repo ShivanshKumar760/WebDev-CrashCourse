@@ -156,9 +156,9 @@ function isValidUrl(string)
       setIsUploading(false);
     //4.Add the fact to the UI:add the fact to state
       console.log(newFact);
-      // console.log(error);
+      console.log(error);
      
-      // setFacts((facts)=>[newFact,...facts]);
+      setFacts((facts)=>[newFact,...facts]);
     //5.Reset input field
       setText("");
       setSource("");

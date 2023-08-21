@@ -46,7 +46,7 @@ function App() {
     <main className="grid-container">
       {/* passing the setCurrentCategory state function as a prop to CategoryFilter component */}
         <CategoryFilter setCurrentCategory={setCurrentCategory}/>
-        {isLoading ? <Loader/>:<Factslist facts={facts}/>}
+        {isLoading ? <Loader/>:<Factslist facts={facts} setFacts={setFacts}/>}
         
         {/* <Factslist facts={facts}/> */}
     </main>
@@ -171,7 +171,7 @@ function CategoryFilter({setCurrentCategory})
     </aside>
     );
 }
-function Factslist({facts})
+function Factslist({facts,setFacts})
 {
   if(facts.length===0)
   {
@@ -182,15 +182,28 @@ function Factslist({facts})
     <section>
       <ul className="facts-list">
         {facts.map(
-          (facts)=><Fact key={facts.id} fact={facts}/>
+          (facts)=><Fact key={facts.id} fact={facts} setFacts={setFacts}/>
           )
         }
       </ul>
     </section>
     )
 }
-function Fact({fact})
+function Fact({fact,setFacts})
 {
+  const [isUpdate,setIsUpdate]=useState(false);
+  async function handleVote(columnName)
+  {
+    setIsUpdate(true);
+    const {data:updatedFact,error}=await supabase.from("facts").update({[columnName]:fact[columnName]+1}).eq("id",fact.id).select();
+
+    console.log(updatedFact)
+    setIsUpdate(false);
+    if(!error)
+    {
+      setFacts((facts)=>facts.map((f)=>(f.id===fact.id?updatedFact[0]:f)));
+    }
+  }
   return (
     <li className="facts">
     <p>{fact.text}<a className="source" href={fact.source} target="_blank" rel="noreferrer">(Source)</a></p>
@@ -198,9 +211,9 @@ function Fact({fact})
 
  
       <div className="vote-buttons">
-        <button>👍{fact.votesInteresting}</button>
-        <button>🤯{fact.votesMindblowing}</button>
-        <button>⛔️{fact.votesFalse}</button> 
+        <button onClick={()=>handleVote("votesInteresting")} disabled={isUpdate}>👍{fact.votesInteresting}</button>
+        <button onClick={()=>handleVote("votesMindblowing")} disabled={isUpdate}>🤯{fact.votesMindblowing}</button>
+        <button onClick={()=>handleVote("votesFalse")} disabled={isUpdate}>⛔️{fact.votesFalse}</button> 
       </div>
     </li>
     )
